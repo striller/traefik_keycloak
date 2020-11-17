@@ -80,3 +80,6 @@ docker-compose up
 ```
 
 Open your Website keycloak.example.com and login with your creditails from the .env file.
+
+## Backup Postgres
+Backup PostgresSQL to the local filesystem with periodic rotating backups, based on [postgres-backup-local](https://github.com/prodrigestivill/docker-postgres-backup-local)
