@@ -31,7 +31,7 @@ secureuser:$apr1$wEvgCB5t$E/TLN7IIBA1dv0dQeffyv.
 Copy the entire output line so we need it in Step 2.
 
 ### Step 2
-Open traefik.toml and replace $YOUR_EMAIL your emailadress. 
+Open traefik.toml and replace $YOUR_EMAIL your emailadress.
 Edit traefik_dynamic.toml and replace $htpasswdoutput.
 
 ```toml
