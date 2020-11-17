@@ -25,14 +25,14 @@ services:
     volumes:
       - ./backup:/backups
     links:
-      - db:db
+      - postgres:db
     depends_on:
-      - db
+      - postgres
     environment:
-      - POSTGRES_HOST=db
-      - POSTGRES_DB=${DB_NAME} 
-      - POSTGRES_USER=${DB_USER}
-      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_HOST=postgres
+      - POSTGRES_DB=${POSTGRES_DATABASE} 
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - POSTGRES_EXTRA_OPTS=-Z9 --schema=public --blobs
       - SCHEDULE=@every 0h30m00s
       - BACKUP_KEEP_DAYS=7
